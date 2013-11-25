@@ -1,11 +1,10 @@
 {
-"name": "gpResponsiveMenu",
+"name": "gpresponsivemenu",
 "title": "gpResponsiveMenu",
 "description": "jQuery plugin for responsive menus. Has 6 options for creating responsive menus based upon media queries. Use multiple options for a single page. Can used with both top and side navigation (simultaneously).",
 "keywords": [
 "menu",
-"responsive",
-"media query"
+"responsive"
 ],
 "version": "0.5.0",
 "author": {
