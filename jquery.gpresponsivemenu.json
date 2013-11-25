@@ -1,0 +1,35 @@
+{
+"name": "gpResponsiveMenu",
+"title": "gpResponsiveMenu",
+"description": "jQuery plugin for responsive menus. Has 6 options for creating responsive menus based upon media queries. Use multiple options for a single page. Can used with both top and side navigation (simultaneously).",
+"keywords": [
+"menu",
+"responsive",
+"media query"
+],
+"version": "0.5",
+"author": {
+"name": "Les Green",
+"url": "https://grasshopperpebbles.com/"
+},
+"maintainers": [
+{
+"name": "Les Green",
+"email": "lesgreen@grasshopperpebbles.com",
+"url": "http://grasshopperpebbles.com"
+}
+],
+"licenses": [
+{
+"type": "GPL 2",
+"url": "https://github.com/lesgreen/gpResponsiveMenu/blob/master/LICENSE"
+}
+],
+"bugs": "https://github.com/lesgreen/gpResponsiveMenu/issues",
+"homepage": "https://github.com/lesgreen/gpResponsiveMenu",
+"docs": "http://grasshopperpebbles.com/jquery/a-responsive-menu-jquery-plugin/",
+"download": "https://github.com/lesgreen/gpResponsiveMenu",
+"dependencies": {
+"jquery": ">=1.5"
+}
+}
