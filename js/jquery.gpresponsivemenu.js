@@ -1,26 +1,6 @@
-/*
- * 	 gpResponsiveMenu 
- * 	 @author Les Green
- * 	 Copyright (C) 2013 Grasshopperpebbles.com.
- *   Version 0.5
- * 
- *   This program is free software: you can redistribute it and/or modify
- *   it under the terms of the GNU General Public License as published by
- *   the Free Software Foundation, either version 3 of the License, or
- *   (at your option) any later version.
- *
- *   This program is distributed in the hope that it will be useful,
- *   but WITHOUT ANY WARRANTY; without even the implied warranty of
- *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- *   GNU General Public License for more details.
- *
- *   You should have received a copy of the GNU General Public License
- *   along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
- *   Demo and Documentation can be found at:   
- *   http://www.grasshopperpebbles.com
- *   
- */
+// gpResponsiveMenu v0.5.2 - jQuery responsive menu plugin
+// (c) 2013 Les Green - GrasshopperPebbles.com
+// License: http://www.gnu.org/licenses/
 
 ;(function($) {
 	$.fn.extend({
@@ -380,7 +360,8 @@ $.gpMenu = function(obj, opts) {
     
     function setMenuControlClick(a, obj) {
     	var viewType = obj.viewType;
-    	$(a).on('click', function(e) {
+    	
+    	$(a).click(function(e) {
     		$(this).toggleClass(obj.active_class);
     		$('.'+obj.nav_cntnr_class).toggle();
     		if (viewType == 'SplitView') {
@@ -456,27 +437,25 @@ $.gpMenu = function(obj, opts) {
     };
     
     function toggleDefaultMenu(menuType, show) {
+    	var m;
     	if (menuType == 'primary') {
     		//$this.children().toggle();
-    		if (show) {
-    			$this.children().show();
-    		} else {    			
-    			$this.children().hide();	
-    		}
+    		m = (opts.nav_container_parent) ? opts.nav_container_parent : $this.children();
     	} else {
-    		var m = opts.secondary_nav;  
-    		//$(m.menu_container).toggle();  		
-    		if (show) {
-    			$(m.menu_container).show();
-    		} else {
-    			$(m.menu_container).hide();	
-    		}
+    		m = opts.secondary_nav;
+    		m = m.menu_container;	
     	}
+		if (show) {
+			$(m).show();
+		} else {    			
+			$(m).hide();	
+		}
     };
    
 };
 
 $.gpMenu.defaults = {
+	nav_container_parent: '', // the parent of the existing menu
 	menu_select_text: 'MENU', 
 	nav_toggle_text: 'MENU',
 	nav_toggle_icon_class: '',
